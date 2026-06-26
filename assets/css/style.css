@@ -1,0 +1,40 @@
+/* Custom styles for landing page */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* FAQ accordion animation */
+.faq-answer {
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.faq-answer.open {
+    max-height: 500px;
+    opacity: 1;
+}
+
+/* Timeline connector line fix */
+.timeline-line {
+    position: absolute;
+    top: 2rem;
+    left: 1.5rem;
+    bottom: -3rem;
+    width: 1px;
+    background-color: rgba(201, 190, 168, 0.3);
+}
+
+@media (min-width: 1024px) {
+    .timeline-line {
+        display: none;
+    }
+}
+
+/* Hide scrollbar on mobile menu but keep functionality */
+#mobile-menu {
+    max-height: calc(100vh - 5rem);
+    overflow-y: auto;
+}
